@@ -1,9 +1,9 @@
 #!/bin/bash
-#cerando imagen
+#creando imagen
 name=imageAPI
 cd container
 docker build -t $name .
-imageID=(docker images | grep $nam | awk '{print $3}'  )
+imageID="$(docker images | grep ${name} | awk '{print $3}'  )"
 #docker run -ti -p 8080:3000 $imageID
 
 #subiedo imagen a gcr.io

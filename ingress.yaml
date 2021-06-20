@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-kubernetes
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /greeting
+            backend:
+              serviceName: hello-kubernetes
+              servicePort: 80
+          - path: /square
+            backend:
+              serviceName: hello-kubernetes
+              servicePort: 80
