@@ -11,3 +11,5 @@ gcloud auth configure-docker
 docker tag gcr.io/google-samples/hello-app:1.0 gcr.io/PROJECT_ID/quickstart-image:tag1
 docker push gcr.io/PROJECT_ID/quickstart-image:tag1
 
+kubectl create -f deployment.yaml
+kubectl create -f ingress.yaml
